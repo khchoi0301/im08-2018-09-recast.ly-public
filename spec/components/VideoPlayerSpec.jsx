@@ -2,7 +2,7 @@ describe ('VideoPlayer', function() {
   var {
     renderIntoDocument,
     findRenderedDOMComponentWithClass
-  } = React.addons.TestUtils;
+  } = ReactTestUtils;
 
   var cuteCatVideo, superCuteCatVideo, codeStatesVideo;
 

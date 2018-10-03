@@ -1,5 +1,5 @@
 describe('VideoList', function() {
-  var { createRenderer } = React.addons.TestUtils;
+  var { createRenderer } = ReactShallowRenderer;
 
   // When testing a React component that renders other nested components,
   // it's a common practice to "shallow render" the component, or render
@@ -30,7 +30,7 @@ describe('VideoList', function() {
     shallowRenderer.render(
       <VideoList videos={threeFakeVideos} />
     );
-    
+
     var videoList = shallowRenderer.getRenderOutput();
     expect(videoList.props.children).to.have.length(3);
     videoList.props.children.forEach(child => expect(child.type).to.equal(VideoListEntry));
@@ -43,7 +43,7 @@ describe('VideoList', function() {
     shallowRenderer.render(
       <VideoList videos={fiveFakeVideos} />
     );
-    
+
     var videoList = shallowRenderer.getRenderOutput();
     expect(videoList.props.children).to.have.length(5);
     videoList.props.children.forEach(child => expect(child.type).to.equal(VideoListEntry));

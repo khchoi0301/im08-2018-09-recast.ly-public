@@ -9,7 +9,7 @@ window.fakeVideoData = [{
     description: 'The best cat video on the internet!',
     thumbnails: {
       default: {
-        url: 'http://www.fndvisions.org/img/cutecat.jpg',
+        url: 'https://i.redd.it/oa78q1ng7lc01.jpg',
       }
     }
   }

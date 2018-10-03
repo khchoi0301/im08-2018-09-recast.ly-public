@@ -2,7 +2,7 @@ describe('VideoListEntry', function() {
   var {
     renderIntoDocument,
     findRenderedDOMComponentWithClass
-  } = React.addons.TestUtils;
+  } = ReactTestUtils;
 
   var cuteCatVideo, superCuteCatVideo, codeStatesVideo;
 
@@ -40,7 +40,7 @@ describe('VideoListEntry', function() {
     var superCuteCatVideoImageElement = findRenderedDOMComponentWithClass(superCuteCatVideo, 'media-object');
     var codeStatesVideoImageElement = findRenderedDOMComponentWithClass(codeStatesVideo, 'media-object');
 
-    expect(cuteCatVideoImageElement.src).to.equal('http://www.fndvisions.org/img/cutecat.jpg');
+    expect(cuteCatVideoImageElement.src).to.equal('https://i.redd.it/oa78q1ng7lc01.jpg');
     expect(superCuteCatVideoImageElement.src).to.equal('https://pbs.twimg.com/profile_images/567285191169687553/7kg_TF4l.jpeg');
     expect(codeStatesVideoImageElement.src).to.equal('https://cdn-images-1.medium.com/max/1600/1*udhgH25bIWU1AQeYvwVKCQ.jpeg');
   });
