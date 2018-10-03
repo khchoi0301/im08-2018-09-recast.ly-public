@@ -7,20 +7,25 @@
   "scripts": {
     "test": "live-server --open=./SpecRunner.html --port=8081",
     "precommit": "lint-staged",
-    "lint": "eslint sprint-one/src sprint-two/src"
+    "lint": "eslint ."
   },
   "lint-staged": {
     "linters": {
       "*.js": [
         "eslint",
         "git add"
+      ],
+      "*.jsx": [
+        "eslint",
+        "git add"
       ]
     },
     "ignore": [
+      ".eslint*",
       "node_modules/",
       "**/*.min.js",
-      "**/compiled/*.js",
-      "**/spec/*.js"
+      "compiled",
+      "spec"
     ]
   },
   "dependencies": {
@@ -34,11 +39,13 @@
     "@babel/core": "^7.1.2",
     "@babel/preset-react": "^7.0.0",
     "chai": "^4.2.0",
+    "eslint": "^5.6.1",
+    "eslint-plugin-react": "^7.11.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.2",
     "mocha": "^5.2.0",
     "react-test-renderer": "^16.5.2",
     "react-testing-library": "^5.1.0",
-    "sinon": "^6.3.4",
-    "husky": "^0.14.3",
-    "lint-staged": "^7.2.2"
+    "sinon": "^6.3.4"
   }
 }
