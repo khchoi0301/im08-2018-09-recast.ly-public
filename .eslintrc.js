@@ -3,10 +3,14 @@
  * Visit this repo for more information:
  *   https://github.com/codestates/eslint-config-codestates
  */
+require('eslint-plugin-react');
 
 module.exports = {
   env: {
-    'es6': true
+    'es6': true,
+    'browser': true,
+    'node': true,
+    'jasmine': true
   },
   parserOptions: {
     sourceType: 'module',
@@ -14,6 +18,13 @@ module.exports = {
     ecmaFeatures: {
       'jsx': true
     }
+  },
+  globals: {
+    'React': true,
+    'ReactDOM': true,
+    '$': true,
+    'searchYouTube': true,
+    'YOUTUBE_API_KEY': true
   },
   rules: {
     /* Indentation */
@@ -44,5 +55,18 @@ module.exports = {
     /* Minuta */
     'comma-style': [2, 'last'],
     'quotes': [1, 'single']
+  },
+  'extends': [
+    'eslint:recommended',
+    'plugin:react/recommended'
+  ],
+  "settings": {
+    "react": {
+      "createClass": "createReactClass", // Regex for Component Factory to use,
+                                         // default to "createReactClass"
+      "pragma": "React",  // Pragma to use, default to "React"
+      "version": "15.0", // React version, default to the latest React stable release
+      "flowVersion": "0.53" // Flow version
+    }
   }
 };
