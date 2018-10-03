@@ -38,10 +38,6 @@ jobs:
           name: transpile
           command: npx babel src --out-dir compiled --presets @babel/preset-react
 
-      - run:
-          name: transpile spec
-          command: npx babel spec --out-dir compiled/spec --presets @babel/preset-react
-
       - run: npm run test-puppeteer
 
       - run:
