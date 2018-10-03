@@ -24,7 +24,8 @@ module.exports = {
     'ReactDOM': true,
     '$': true,
     'searchYouTube': true,
-    'YOUTUBE_API_KEY': true
+    'YOUTUBE_API_KEY': true,
+    'PropTypes': true
   },
   rules: {
     /* Indentation */
@@ -54,7 +55,9 @@ module.exports = {
     'no-use-before-define': [2, { 'functions': false }],
     /* Minuta */
     'comma-style': [2, 'last'],
-    'quotes': [1, 'single']
+    'quotes': [1, 'single'],
+    'react/prop-types': 'ignore',
+    "react/jsx-no-undef": ['enabled', { "allowGlobals": true }]
   },
   'extends': [
     'eslint:recommended',

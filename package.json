@@ -7,7 +7,7 @@
   "scripts": {
     "test": "live-server --open=./SpecRunner.html --port=8081",
     "precommit": "lint-staged",
-    "lint": "eslint ."
+    "lint": "eslint \"src/**\""
   },
   "lint-staged": {
     "linters": {
