@@ -34,6 +34,14 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
+      - run:
+          name: transpile
+          command: npx babel src --out-dir compiled --presets @babel/preset-react
+
+      - run:
+          name: transpile spec
+          command: npx babel spec --out-dir compiled/spec --presets @babel/preset-react
+
       - run: npm run test-puppeteer
 
       - run:
